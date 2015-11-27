@@ -13,7 +13,7 @@ public class Main {
 
 
 
-    Vector <DataUnit> trainset, testset;
+    public static Vector <DataUnit> trainset, testset;
     Random random;// = new Random();
     int positivecounter[][];
     int negetivecounter[][];
@@ -355,42 +355,4 @@ public class Main {
         }
     }
 
-
-    class DataUnit {
-        int attr[] , result;
-
-        public DataUnit(int attr[], int result){
-            this.attr = new int[9];
-            for(int i=0;i<9;i++){
-                this.attr[i] = attr[i];
-            }
-            this.result = result;
-        }
-
-        @Override
-        public String toString() {
-            String s = "";
-            for(int i=0;i<9;i++){
-                s += i + " : " + attr[i] + ", ";
-            }
-            s += " :: " + result;
-            return s;
-        }
-    }
-
-    class Node {
-        int attrType;
-        int attrvalue;
-        int label;
-        Node parent;
-        Node child[];
-
-        public Node(){
-            attrType = -1;
-            attrvalue = -1;
-            parent = null;
-            child = new Node[11];
-            label = -1;
-        }
-    }
 }
